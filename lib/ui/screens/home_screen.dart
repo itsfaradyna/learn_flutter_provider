@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter_provider/ui/widget/cart_section.dart';
-import 'package:learn_flutter_provider/ui/widget/counter_section.dart';
+import 'package:learn_flutter_provider/ui/widget/counter_item_section.dart';
 import 'package:learn_flutter_provider/ui/widget/user_section.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             UserSection(),
             SizedBox(height: 20),
-            CounterSection(),
+            CounterItemSection(),
             SizedBox(height: 20),
             Expanded(
               child: CartSection()

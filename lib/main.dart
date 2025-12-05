@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter_provider/models/cart_model.dart';
-import 'package:learn_flutter_provider/models/counter_model.dart';
+import 'package:learn_flutter_provider/models/counter_item_model.dart';
 import 'package:learn_flutter_provider/models/user_model.dart';
 import 'package:learn_flutter_provider/ui/screens/home_screen.dart';
 import 'package:provider/provider.dart';
@@ -9,7 +9,7 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => CounterModel()),
+        ChangeNotifierProvider(create: (_) => CounterItemModel()),
         ChangeNotifierProvider(create: (_) => UserModel()),
         ChangeNotifierProvider(create: (_) => CartModel()),
       ],

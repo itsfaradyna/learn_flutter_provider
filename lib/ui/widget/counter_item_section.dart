@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter_provider/models/counter_model.dart';
+import 'package:learn_flutter_provider/models/counter_item_model.dart';
 import 'package:provider/provider.dart';
 
-class CounterSection extends StatelessWidget {
-  const CounterSection({super.key});
+class CounterItemSection extends StatelessWidget {
+  const CounterItemSection({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<CounterModel>(
+    return Consumer<CounterItemModel>(
       builder: (_, counterModel, __) {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
