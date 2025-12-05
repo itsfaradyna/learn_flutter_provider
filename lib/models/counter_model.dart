@@ -9,4 +9,14 @@ class CounterModel with ChangeNotifier {
     _counter++;
     notifyListeners();  // Notify listeners that the state has changed
   }
+
+  void decrement() {
+    _counter--;
+    notifyListeners();  // Notify listeners (UI) that the counter has changed
+  }
+
+  void reset() {
+    _counter = 0;
+    notifyListeners();  // Notify listeners to reset the UI
+  }
 }
