@@ -1,11 +1,26 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:learn_flutter_provider/data/datasources/country_api.dart';
 import 'package:learn_flutter_provider/data/models/cart_model.dart';
 import 'package:learn_flutter_provider/data/models/counter_item_model.dart';
 import 'package:learn_flutter_provider/data/models/user_model.dart';
+import 'package:learn_flutter_provider/data/repositories/country_repository_impl.dart';
 import 'package:learn_flutter_provider/ui/screens/home_screen.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  final dio = Dio();
+  final api = CountryApi(dio);
+  final repo = CountryRepositoryImpl(api);
+
+  final countries = await repo.getCountries();
+
+  for (var country in countries) {
+    print('${country.name} - ${country.alpha2Code} - ${country.flag}');
+  }
+
   runApp(
     MultiProvider(
       providers: [
