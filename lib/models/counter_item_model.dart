@@ -17,7 +17,7 @@ class CounterItemModel with ChangeNotifier {
 
   void setQuantity(int value) {
     _quantity = value;
-    notifyListeners()
+    notifyListeners();
   }
 
   void reset() {

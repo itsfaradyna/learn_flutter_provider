@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:learn_flutter_provider/models/cart_item_model.dart';
+import 'package:learn_flutter_provider/ui/widget/cart_item_row.dart';
 import 'package:provider/provider.dart';
 import 'package:learn_flutter_provider/models/cart_model.dart';
 
@@ -20,12 +22,9 @@ class CartSection extends StatelessWidget {
                 itemCount: cartModel.items.length,
                 itemBuilder: (context, index) {
                   final item = cartModel.items[index];
-                  return ListTile(
-                    title: Text(item),
-                    trailing: IconButton(
-                      icon: const Icon(Icons.remove),
-                      onPressed: () => cartModel.removeItem(item),
-                    ),
+                  return ChangeNotifierProvider.value(
+                    value: item,
+                    child: const CartItemRow(),
                   );
                 },
               ),
@@ -35,7 +34,13 @@ class CartSection extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
                 onPressed: () {
-                  cartModel.addItem('Item ${cartModel.items.length + 1}');
+                  final id = DateTime.now().millisecondsSinceEpoch.toString();
+                  cartModel.addItem(
+                    CartItemModel(
+                      id: id,
+                      name: 'Item $id',
+                    ),
+                  );
                 },
                 child: const Text('Add Item to Cart'),
               ),
