@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter_provider/models/cart_item_model.dart';
+import 'package:learn_flutter_provider/data/models/cart_item_model.dart';
 import 'package:provider/provider.dart';
 
 class CartItemRow extends StatelessWidget {

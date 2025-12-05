@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter_provider/models/counter_item_model.dart';
+import 'package:learn_flutter_provider/data/models/counter_item_model.dart';
 import 'package:provider/provider.dart';
 
 class CounterItemSection extends StatelessWidget {

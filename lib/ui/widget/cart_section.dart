@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter_provider/models/cart_item_model.dart';
+import 'package:learn_flutter_provider/data/models/cart_item_model.dart';
+import 'package:learn_flutter_provider/data/models/cart_model.dart';
 import 'package:learn_flutter_provider/ui/widget/cart_item_row.dart';
 import 'package:provider/provider.dart';
-import 'package:learn_flutter_provider/models/cart_model.dart';
 
 class CartSection extends StatelessWidget {
   const CartSection({super.key});

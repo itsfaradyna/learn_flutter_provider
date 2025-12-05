@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import 'counter_item_model.dart';
+import 'package:learn_flutter_provider/data/models/counter_item_model.dart';
 
 class CartItemModel with ChangeNotifier {
   final String id;
