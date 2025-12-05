@@ -13,7 +13,7 @@ class CounterItemSection extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Counter: ${counterModel.counter}',
+              'Counter: ${counterModel.quantity}',
               style: const TextStyle(fontSize: 24),
             ),
             Row(

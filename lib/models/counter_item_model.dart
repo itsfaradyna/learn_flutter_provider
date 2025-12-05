@@ -1,22 +1,22 @@
 import 'package:flutter/foundation.dart';
 
 class CounterItemModel with ChangeNotifier {
-  int _counter = 0;
+  int _quantity = 0;
 
-  int get counter => _counter;
+  int get quantity => _quantity;
 
   void increment() {
-    _counter++;
+    _quantity++;
     notifyListeners();  // Notify listeners that the state has changed
   }
 
   void decrement() {
-    _counter--;
+    _quantity--;
     notifyListeners();  // Notify listeners (UI) that the counter has changed
   }
 
   void reset() {
-    _counter = 0;
+    _quantity = 0;
     notifyListeners();  // Notify listeners to reset the UI
   }
 }
